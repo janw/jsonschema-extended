@@ -7,6 +7,34 @@ The jsonschema-extended library (JSE) provides an extended version of JSON Schem
 
 I created JSE to use it in the configuration validation in another project of mine, [CleanAB](https://github.com/janw/cleanab), which requires more "niche" data types to be checked for, as well as default values. The latter is also supported by JSE right out of the box.
 
+## What is "extended" about it?
+
+* Format validation is enabled by default
+* Most formats of all JSON schema draft versions are enabled out-of-the-box (independent of what version they were actually specified in), namely:
+  * `color`
+  * `date`
+  * `date-time`
+  * `email`
+  * `hostname`
+  * `idn-email`
+  * `idn-hostname`
+  * `ipv4`
+  * `ipv6`
+  * `json-pointer`
+  * `regex`
+  * `relative-json-pointer`
+  * `time`
+  * `uri`
+  * `uri-reference`
+  * `uuid`
+* Additonal general purpose formats have been added:
+  * `color3`: [CSS3 color names](https://www.w3.org/TR/2018/REC-css-color-3-20180619/#svg-color)
+  * `http`: HTTP or HTTPS URLs
+  * `https`: HTTPS URLs
+* Additional niche formats
+  * `iban`: [IBAN (International Bank Account Number)](https://en.wikipedia.org/wiki/International_Bank_Account_Number)
+  * `de_blz`: [German Bankleitzahl (BLZ)](https://de.wikipedia.org/wiki/Bankleitzahl)
+
 ## Planned features
 
 * [ ] Allow generating an end user-friendly representation of a given schema, specifically to document available configuration options with title, description, default, example, etc.
