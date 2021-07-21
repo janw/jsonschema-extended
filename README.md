@@ -9,11 +9,14 @@ I created JSE to use it in the configuration validation in another project of mi
 
 ## What is "extended" about it?
 
+### Extensive format checks
+
 * Format validation is enabled by default
 * Most formats of all JSON schema draft versions are enabled out-of-the-box (independent of what version they were actually specified in), namely:
   * `color`
-  * `date`
-  * `date-time`
+  * `date`: [RFC3339] date
+  * `date-time`: [RFC3339] date-time
+  * `duration`: [RFC3339] duration
   * `email`
   * `hostname`
   * `idn-email`
@@ -23,7 +26,7 @@ I created JSE to use it in the configuration validation in another project of mi
   * `json-pointer`
   * `regex`
   * `relative-json-pointer`
-  * `time`
+  * `time`: [RFC3339] time
   * `uri`
   * `uri-reference`
   * `uuid`
@@ -34,6 +37,8 @@ I created JSE to use it in the configuration validation in another project of mi
 * Additional niche formats
   * `iban`: [IBAN (International Bank Account Number)](https://en.wikipedia.org/wiki/International_Bank_Account_Number)
   * `de_blz`: [German Bankleitzahl (BLZ)](https://de.wikipedia.org/wiki/Bankleitzahl)
+
+[RFC3339]: https://datatracker.ietf.org/doc/html/rfc3339
 
 ## Planned features
 

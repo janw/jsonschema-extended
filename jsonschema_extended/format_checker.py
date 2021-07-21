@@ -104,6 +104,10 @@ AVAILABLE_CHECKS: Dict[str, Check] = {
         (ValueError, TypeError),
         source="jsonschema",
     ),
+    "duration": Check(
+        checkers.is_rfc3339_duration,
+        source="jsonschema_extended",
+    ),
     "uuid": Check(
         checkers.is_uuid,
         ValueError,
