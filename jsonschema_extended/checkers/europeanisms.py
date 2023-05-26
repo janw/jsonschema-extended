@@ -1,6 +1,5 @@
 import string
 
-
 LETTERS = {ord(d): str(i) for i, d in enumerate(string.digits + string.ascii_uppercase)}
 
 
