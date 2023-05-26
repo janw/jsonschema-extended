@@ -2,16 +2,11 @@ import re
 import socket
 import struct
 from dataclasses import dataclass
-from typing import Callable
-from typing import Dict
-from typing import Set
-from typing import Tuple
-from typing import Union
+from typing import Callable, Dict, Set, Tuple, Union
 
 import idna
 import jsonpointer
-from jsonschema import _format
-from jsonschema import FormatChecker
+from jsonschema import FormatChecker, _format
 
 from . import checkers
 
